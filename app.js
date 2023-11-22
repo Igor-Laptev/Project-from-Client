@@ -1,24 +1,22 @@
-require("@babel/register");
+require('@babel/register');
 
-require("dotenv").config();
+require('dotenv').config();
 
-const express = require("express");
-const serverConfig = require("./config/serverConfig");
+const express = require('express');
+const serverConfig = require('./config/serverConfig');
 
-const indexRouter = require("./router/indexRouter");
+const indexRouter = require('./router/indexRouter');
 
-const checkUser = require("./middlewares/verifyJWT");
+const checkUser = require('./middlewares/verifyJWT');
 
 const app = express();
-
 
 serverConfig(app);
 
 // проверяем, кто сейчас на сайте сидит
 app.use(checkUser);
 
-
-app.use("/", indexRouter);
+app.use('/', indexRouter);
 
 const PORT = 4000;
 
