@@ -1,8 +1,10 @@
 const React = require("react");
 
-function CardBook({ book }) {
+function CardBook({ book, favorites }) {
+  const arr = favorites.filter((favorite) => favorite.bookId === book.id);
+  console.log("MASSSIIIIIVVVV", arr);
   return (
-    <div className="card">
+    <div className="card js-card" data-id={book.id}>
       <div className="card-body">
         <img src={book.img} alt="" />
         <h5 className="card-title">{book.name}</h5>
@@ -11,6 +13,9 @@ function CardBook({ book }) {
         <a href="#" className="btn btn-primary">
           Подробнее
         </a>
+        <button type="button" className="btn btn-success btn-fav ms-2">
+          {arr.length ?  "Удалить из избранного" : "Добавить в избранное"}
+        </button>
       </div>
     </div>
   );
