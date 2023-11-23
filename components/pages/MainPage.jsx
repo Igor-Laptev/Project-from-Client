@@ -1,16 +1,26 @@
-const React = require("react");
-const Layout = require("../Layout");
-const CardBook = require("../CardBook");
+const React = require('react');
+const Layout = require('../Layout');
+const CardBook = require('../CardBook');
 
-function MainPage({ books }) {
+function MainPage({ books, layout }) {
   return (
-    <Layout>
-      <div>
-        {books.map((book) => (
-          <CardBook key={book.id} book={book} />
-        ))}
-      </div>
-    </Layout>
+    <>
+      {layout ? (
+        <div className="main-page">
+          {books.map((book) => (
+            <CardBook key={book.id} book={book} />
+          ))}
+        </div>
+      ) : (
+        <Layout>
+          <div className="main-page">
+            {books.map((book) => (
+              <CardBook key={book.id} book={book} />
+            ))}
+          </div>
+        </Layout>
+      )}
+    </>
   );
 }
 
