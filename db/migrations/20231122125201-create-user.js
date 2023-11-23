@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       phone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.TEXT
       },
       password: {
         type: Sequelize.TEXT

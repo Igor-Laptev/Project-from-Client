@@ -28,7 +28,7 @@ function Header({ user }) {
       <div>
         {!user && (
           <>
-            <a href="#" style={linkStyle}>
+            <a href="/auth/registration" style={linkStyle}>
               Регистрация
             </a>
             <a href="#" style={linkStyle}>
