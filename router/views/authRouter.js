@@ -8,6 +8,10 @@ router.get("/registration", (req, res) => {
   res.send(html);
 });
 
+router.get("/login", (req, res) => {
+  res.send(res.renderComponent(LoginPage));
+});
+
 
 
 module.exports = router;
