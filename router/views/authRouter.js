@@ -12,6 +12,10 @@ router.get("/login", (req, res) => {
   res.send(res.renderComponent(LoginPage));
 });
 
-
+router.get("/logout", (req, res) => {
+  res.clearCookie("refresh").clearCookie("access");
+  res.locals.user = undefined;
+  res.redirect("/");
+});
 
 module.exports = router;

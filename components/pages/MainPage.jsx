@@ -2,9 +2,9 @@ const React = require("react");
 const Layout = require("../Layout");
 const CardBook = require("../CardBook");
 
-function MainPage({ books }) {
+function MainPage({ books, user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div>
         {books.map((book) => (
           <CardBook key={book.id} book={book} />
