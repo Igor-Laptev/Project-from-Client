@@ -38,7 +38,7 @@ function Header({ user }) {
         )}
         {user && (
           <>
-            <a href="#" style={linkStyle}>
+            <a href="/favorite" style={linkStyle}>
               Избранное
             </a>
             <a href="#" style={linkStyle}>
