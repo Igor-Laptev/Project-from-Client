@@ -1,6 +1,7 @@
-const React = require("react");
-const Layout = require("../Layout");
-const CardBook = require("../CardBook");
+const React = require('react');
+const Layout = require('../Layout');
+const CardBook = require('../CardBook');
+
 
 function MainPage({ books, favorites }) {
   return (
@@ -11,6 +12,7 @@ function MainPage({ books, favorites }) {
         ))}
       </div>
     </Layout>
+
   );
 }
 
