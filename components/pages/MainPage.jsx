@@ -1,10 +1,15 @@
 const React = require("react");
 const Layout = require("../Layout");
+const CardBook = require("../CardBook");
 
-function MainPage() {
+function MainPage({ books }) {
   return (
     <Layout>
-      <h1>Hello</h1>
+      <div>
+        {books.map((book) => (
+          <CardBook key={book.id} book={book} />
+        ))}
+      </div>
     </Layout>
   );
 }

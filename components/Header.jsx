@@ -21,7 +21,7 @@ function Header({ user }) {
   return (
     <header style={headerStyle}>
       <div>
-        <a href="#" style={linkStyle}>
+        <a href="/" style={linkStyle}>
           Главная страница
         </a>
       </div>
