@@ -13,6 +13,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/logout", (req, res) => {
+  // console.log(res.locals.user, "!!!!!!!!!!!!!!!");
   res.clearCookie("refresh").clearCookie("access");
   res.locals.user = undefined;
   res.redirect("/");

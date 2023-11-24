@@ -1,4 +1,5 @@
-const React = require("react");
+const React = require('react');
+
 
 function CardBook({ book, favorites, user,favorite}) {
   let arr=['favorites']
@@ -7,6 +8,7 @@ function CardBook({ book, favorites, user,favorite}) {
    arr = favorites.filter((favorite) => favorite.bookId === book.id);
   }
   const isCreator = book.userId === user.id
+
 
   return (
     <div className="card js-card" data-id={book.id} data-favorite={favorite}>
@@ -18,8 +20,11 @@ function CardBook({ book, favorites, user,favorite}) {
         <a href={`/book/${book.id}`} className="btn btn-primary">
           Подробнее
         </a>
+
         <button type="button" className="btn btn-success btn-fav ms-2">
-          {arr.length ?  "Удалить из избранного" : "Добавить в избранное"}
+          
+          {arr.length ? "Удалить из избранного" : "Добавить в избранное"}
+
         </button>
         {isCreator && (
           <button

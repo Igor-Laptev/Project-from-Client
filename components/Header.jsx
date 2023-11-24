@@ -41,8 +41,8 @@ function Header({ user }) {
             <a href="/favorite" style={linkStyle}>
               Избранное
             </a>
-            <a href="/add" style={linkStyle}>
-              Добавить книгу
+            <a href="/profile" style={linkStyle}>
+              Профиль
             </a>
             <a href="/auth/logout" style={linkStyle}>
               Выход

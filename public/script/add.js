@@ -25,7 +25,7 @@ if (addBook) {
 
       if (data.success) {
         const container = document.querySelector(".add-container");
-        container.insertAdjacentHTML("afterbegin", data.html);
+        container.insertAdjacentHTML("afterend", data.html);
       }
     } catch (error) {
       console.log(error.message);

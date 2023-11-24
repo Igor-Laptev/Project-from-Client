@@ -1,12 +1,15 @@
 const React = require("react");
 const Layout = require("./Layout");
+const CardBook = require("./CardBook");
 
-function AddBook({user}) {
+
+function AddBook({ user }) {
   return (
-    <Layout user={user}>
-      <div>
+    
+      <div className="add-container">
+
         <h1>Добавьте Вашу книгу!</h1>
-        <form className="add-book">
+        <form className="add-book ">
           <div>
             <label>Название:</label>
             <input type="text" name="name" />
@@ -26,7 +29,7 @@ function AddBook({user}) {
           <button type="submit">Добавить</button>
         </form>
       </div>
-    </Layout>
+    
   );
 }
 
