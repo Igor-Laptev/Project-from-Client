@@ -5,6 +5,7 @@ const { Book, Favorite } = require("../../db/models");
 router.get("/", async (req, res) => {
   try {
     if (!res.locals.user) {
+      console.log(123);
       // Пользователь не зарегистрирован, обработайте ошибку здесь
       res.redirect("/auth/login"); // Перенаправление на страницу входа
       return;

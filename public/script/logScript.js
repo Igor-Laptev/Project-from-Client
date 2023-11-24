@@ -18,20 +18,14 @@ if (loginForm) {
         },
       });
       const body = await response.json();
-
+      console.log(body);
       if (body.success) {
         window.location.href = "/";
       } else {
         alert(body.error);
       }
     } catch (error) {
-      const body = await response.json();
-
-      if (body.success) {
-        window.location.href = "/";
-      } else {
-        alert(body.error);
-      }
+      console.log({ error });
     }
   });
 }
