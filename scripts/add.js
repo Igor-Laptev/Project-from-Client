@@ -4,7 +4,7 @@ if (addBook) {
   addBook.addEventListener('submit', async (e) => {
     e.preventDefault();
     const { name, author, description, img } = e.target;
-    console.log(name, author, description, img);
+
     try {
       const response = await fetch('/api/books', {
         method: 'POST',
@@ -19,7 +19,7 @@ if (addBook) {
         }),
       });
       const data = await response.json();
-      console.log(data);
+
       if (data.success) {
       }
     } catch (error) {

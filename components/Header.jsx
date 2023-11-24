@@ -31,7 +31,7 @@ function Header({ user }) {
             <a href="/auth/registration" style={linkStyle}>
               Регистрация
             </a>
-            <a href="#" style={linkStyle}>
+            <a href="/auth/login" style={linkStyle}>
               Вход
             </a>
           </>
@@ -41,10 +41,10 @@ function Header({ user }) {
             <a href="/favorite" style={linkStyle}>
               Избранное
             </a>
-            <a href="#" style={linkStyle}>
+            <a href="/add" style={linkStyle}>
               Добавить книгу
             </a>
-            <a href="#" style={linkStyle}>
+            <a href="/auth/logout" style={linkStyle}>
               Выход
             </a>
           </>
