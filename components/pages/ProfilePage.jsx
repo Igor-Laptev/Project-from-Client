@@ -2,6 +2,7 @@ const React = require('react');
 const AddBook = require('../AddBook');
 const Layout = require('../Layout');
 const MainPage = require('./MainPage');
+const FavoritePage = require('./FavoritePage');
 
 function ProfilePage({ user,books ,layout}) {
   return (
@@ -9,7 +10,7 @@ function ProfilePage({ user,books ,layout}) {
       <div>
         {user && <h2>Добро пожаловать, {user.name}!</h2>}
         <AddBook />
-        <MainPage books={books} layout={layout}/>
+        <FavoritePage books={books} />
       </div>
     </Layout>
   );

@@ -1,8 +1,13 @@
 const React = require("react");
 
-function CardBook({ book, favorites }) {
-  const arr = favorites.filter((favorite) => favorite.bookId === book.id);
-  console.log("MASSSIIIIIVVVV", arr);
+function CardBook({ book, favorites, user}) {
+  let arr=['favorites']
+  if(favorites){
+
+   arr = favorites.filter((favorite) => favorite.bookId === book.id);
+  }
+
+
   return (
     <div className="card js-card" data-id={book.id}>
       <div className="card-body">

@@ -8,12 +8,12 @@ router.get("/", async (req, res) => {
   try {
     const books = await Book.findAll();
 
-    const favorites = await Favorite.findAll({ where: { userId: 1 } });
-    // console.log(favorites);
+    const favorites = await Favorite.findAll({ where: { userId: res.locals.user.id } });
+
     const html = res.renderComponent(MainPage, { books, favorites });
     res.send(html);
   } catch (error) {
-    console.log("---", error.message);
+    console.log( error.message);
 
   }
 });

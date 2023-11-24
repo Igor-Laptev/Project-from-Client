@@ -11,7 +11,7 @@ const generateTokens = require("../../utils/authUtils");
 router.post("/registration", async (req, res) => {
   try {
     const { name, email, phone, password } = req.body;
-    console.log(req.body);
+
 
     if (name && email && phone && password) {
       const hash = await bcrypt.hash(password, 10);
