@@ -9,12 +9,12 @@ const ApiAuthRouter = require("./api/authRouter");
 
 const favoriteRouter = require("./views/favorite.routes");
 const favoriteApiRouter = require("./api/favorite.routes");
-const addBookRouter = require("./views/addBook.routes");
+
 
 router.use("/", mainRouter);
 router.use("/favorite", favoriteRouter);
 router.use("/profile", profileRouter);
-router.use("/add", addBookRouter);
+
 
 router.use("/api/favorite", favoriteApiRouter);
 router.use("/api/books", apiBookRouter);
