@@ -10,8 +10,10 @@ router.post("/add", async (req, res) => {
     const file = req.files?.homesImg;
     const image = await fileuploadMiddlewares(file);
 
-    const favorites = await Favorite.findAll({ where: { userId: res.locals.user.id } });
-    
+    const favorites = await Favorite.findAll({
+      where: { userId: res.locals.user.id },
+    });
+
     const book = await Book.create({
       name: name,
       author: author,
@@ -20,10 +22,58 @@ router.post("/add", async (req, res) => {
       userId: res.locals.user.id,
     });
 
-    const html = res.renderComponent(CardBook, { book, favorites }, { doctype: false });
+    const html = res.renderComponent(
+      CardBook,
+      { book, favorites },
+      { doctype: false }
+    );
 
     res.json({ html, success: true });
   } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // отправить запрос к бд
+    const cardDelete = await Book.destroy({
+      where: { id, userId: res.locals.user.id },
+    });
+
+    if (!cardDelete) {
+      return res.status(400).json({ message: "Error request" });
+    }
+    // просто вернуть статус в ответе без каких-либо данных
+    res.sendStatus(204);
+  } catch (error) {
+    console.log(error.message, "eerrr");
     res.status(500).json({ error: error.message });
   }
 });
