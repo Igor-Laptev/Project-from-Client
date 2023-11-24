@@ -1,6 +1,6 @@
 const React = require("react");
 
-function CardBook({ book, favorites, user}) {
+function CardBook({ book, favorites, user,favorite}) {
   let arr=['favorites']
   if(favorites){
 
@@ -9,7 +9,7 @@ function CardBook({ book, favorites, user}) {
 
 
   return (
-    <div className="card js-card" data-id={book.id}>
+    <div className="card js-card" data-id={book.id} data-favorite={favorite}>
       <div className="card-body">
         <img src={book.img} alt="" />
         <h5 className="card-title">{book.name}</h5>

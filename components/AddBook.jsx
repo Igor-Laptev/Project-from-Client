@@ -1,9 +1,9 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function AddBook() {
+function AddBook({user}) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div>
         <h1>Добавьте Вашу книгу!</h1>
         <form className="add-book">
