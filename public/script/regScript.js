@@ -5,7 +5,7 @@ if (regaForm) {
     event.preventDefault();
 
     const { name, email, phone, password } = event.target;
-    console.log(name.value, email.value, phone.value, password.value);
+
     try {
       const response = await fetch("/api/auth/registration", {
         method: "POST",

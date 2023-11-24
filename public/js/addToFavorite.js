@@ -1,5 +1,5 @@
 const bookContainer = document.querySelector(".js-book-container");
-// console.log(bookContainer);
+
 
 if (bookContainer) {
   bookContainer.addEventListener("click", async (event) => {
