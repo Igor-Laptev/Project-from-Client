@@ -15,7 +15,7 @@ function CardBook({ book, favorites, user,favorite}) {
         <h5 className="card-title">{book.name}</h5>
         <h5 className="card-title">{book.author}</h5>
         <p className="card-text">{book.description}</p>
-        <a href="#" className="btn btn-primary">
+        <a href={`/book/${book.id}`} className="btn btn-primary">
           Подробнее
         </a>
         <button type="button" className="btn btn-success btn-fav ms-2">

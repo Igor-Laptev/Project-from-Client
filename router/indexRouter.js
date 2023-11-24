@@ -2,6 +2,7 @@ const router = require("express").Router();
 const mainRouter = require("./views/main.routes");
 const profileRouter = require("./views/profile.routes");
 const apiBookRouter = require("./api/booksApi.router");
+const bookRouter = require("./views/book.routes")
 
 const authRouter = require("./views/authRouter");
 
@@ -15,6 +16,7 @@ router.use("/", mainRouter);
 router.use("/favorite", favoriteRouter);
 router.use("/profile", profileRouter);
 router.use("/add", addBookRouter);
+router.use("/book", bookRouter);
 
 router.use("/api/favorite", favoriteApiRouter);
 router.use("/api/books", apiBookRouter);

@@ -6,7 +6,7 @@ const FavoritePage = require('./FavoritePage');
 
 function ProfilePage({ user,books ,layout}) {
   return (
-    <Layout>
+    <Layout >
       <div>
         {user && <h2>Добро пожаловать, {user.name}!</h2>}
         <AddBook />
