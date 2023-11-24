@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
       });
     }
 
-
     const html = res.renderComponent(MainPage, { books, favorites });
     res.send(html);
   } catch (error) {
