@@ -7,7 +7,7 @@ function CardBook({ book, favorites, user,favorite}) {
 
    arr = favorites.filter((favorite) => favorite.bookId === book.id);
   }
-  const isCreator = book.userId === user.id
+
 
 
   return (
@@ -21,12 +21,12 @@ function CardBook({ book, favorites, user,favorite}) {
           Подробнее
         </a>
 
-        <button type="button" className="btn btn-success btn-fav ms-2">
+    {  user &&  <button type="button" className="btn btn-success btn-fav ms-2">
           
           {arr.length ? "Удалить из избранного" : "Добавить в избранное"}
 
-        </button>
-        {isCreator && (
+        </button>}
+        {  user &&  book.userId === user.id && (
           <button
             type="button"
             className="btn btn-warning btn-edit ms-2"

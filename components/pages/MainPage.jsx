@@ -8,7 +8,7 @@ function MainPage({ books, favorites, user, layout }) {
       {layout ? (
         <div className="js-book-container">
           {books.map((book) => (
-            <CardBook key={book.id} book={book} favorites={favorites} />
+            <CardBook key={book.id} book={book} favorites={favorites} user={user} />
           ))}
         </div>
       ) : (
