@@ -12,7 +12,7 @@ function ProfilePage({ user, books, layout }) {
       <div>
         {user && <h2>Добро пожаловать, {user.name}!</h2>}
         <AddBook />
-        <MainPage books={books} layout={layout} />
+        <MainPage books={books} layout={layout} profile={true} user={user}/>
       </div>
     </Layout>
   );
