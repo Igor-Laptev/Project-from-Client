@@ -1,5 +1,5 @@
-const React = require("react");
-const Layout = require("../Layout");
+const React = require('react');
+const Layout = require('../Layout');
 
 module.exports = function LoginPage() {
   return (
@@ -25,6 +25,3 @@ module.exports = function LoginPage() {
     </Layout>
   );
 };
-
-// комментарий
-// kommentghcj
