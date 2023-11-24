@@ -1,7 +1,8 @@
 const React = require("react");
 
+
 function CardBook({ book, favorites, user, favorite,profile }) {
-  console.log(user,'pppppp')
+
   let arr = ["favorites"];
   if (favorites) {
     arr = favorites.filter((favorite) => favorite.bookId === book.id);
@@ -18,6 +19,7 @@ function CardBook({ book, favorites, user, favorite,profile }) {
           Подробнее
         </a>
 
+
         {user  &&(
       
        
@@ -28,12 +30,16 @@ function CardBook({ book, favorites, user, favorite,profile }) {
           >
             Редактировать
           </a>
+           <button type="button" className="btn btn-danger js-btn-remove">
+              Удалить
+            </button>
         
       :
       <button type="button" className="btn btn-success btn-fav ms-2">
       {arr.length ? "Удалить из избранного" : "Добавить в избранное"}
     </button>
     )}
+
       </div>
     </div>
   );

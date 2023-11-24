@@ -1,8 +1,8 @@
-
 img {
   width: 300px;
   height: 300px;
   mix-blend-mode: multiply;
+  background-color: rgb(0, 0, 0);
 
   justify-content: space-between;
 }
@@ -13,3 +13,51 @@ img {
   justify-content: space-between;
 }
 
+.profile-page {
+  background-color: #f5f5f5; /* Темно-белый */
+}
+.welcome-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a45b5b;
+}
+
+.add-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+}
+.js-book-container {
+  background-color: #a45b5b;
+}
+
+h1 {
+  font-family: cursive;
+}
+.label2 {
+  font-family: cursive;
+  font-size: 1.5em;
+}
+.header {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 1000% 100%;
+  animation: rainbow-animation 10s linear infinite;
+}
