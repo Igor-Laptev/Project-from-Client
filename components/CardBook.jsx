@@ -1,7 +1,9 @@
-const React = require("react");
+const React = require('react');
 
 function CardBook({ book, favorites, user }) {
+
   let arr = ["favorites"];
+
   if (favorites) {
     arr = favorites.filter((favorite) => favorite.bookId === book.id);
   }
@@ -16,8 +18,11 @@ function CardBook({ book, favorites, user }) {
         <a href="#" className="btn btn-primary">
           Подробнее
         </a>
+
         <button type="button" className="btn btn-success btn-fav ms-2">
+          
           {arr.length ? "Удалить из избранного" : "Добавить в избранное"}
+
         </button>
       </div>
     </div>

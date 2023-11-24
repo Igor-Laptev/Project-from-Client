@@ -1,9 +1,15 @@
-.star {
-  cursor: pointer;
-  color: gray;
-  font-size: 1.5em;
+
+img {
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: multiply;
+
+  justify-content: space-between;
 }
 
-.star.active {
-  color: gold;
+.js-book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+

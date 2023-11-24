@@ -25,3 +25,6 @@ module.exports = function LoginPage() {
     </Layout>
   );
 };
+
+// комментарий
+// kommentghcj
