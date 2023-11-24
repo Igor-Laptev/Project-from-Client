@@ -1,16 +1,16 @@
-const React = require('react');
-const AddBook = require('../AddBook');
-const Layout = require('../Layout');
-const MainPage = require('./MainPage');
-const FavoritePage = require('./FavoritePage');
+const React = require("react");
+const AddBook = require("../AddBook");
 
-function ProfilePage({ user,books ,layout}) {
+const MainPage = require("./MainPage");
+const Layout = require("../Layout");
+
+function ProfilePage({ user, books, layout }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div>
         {user && <h2>Добро пожаловать, {user.name}!</h2>}
         <AddBook />
-        <FavoritePage books={books} />
+        <MainPage books={books} layout={layout} />
       </div>
     </Layout>
   );

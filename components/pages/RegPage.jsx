@@ -9,7 +9,7 @@ module.exports = function RegPage() {
           className="input-form"
           type="text"
           name="name"
-          placeholder="name@example.com"
+          placeholder="Your name"
         />
         <input
           className="input-form"
@@ -22,7 +22,7 @@ module.exports = function RegPage() {
           type="number"
           name="phone"
           pattern="[0-9]{11}"
-          placeholder="+79999999999"
+          placeholder="79999999999"
           required
         />
         <input
@@ -30,7 +30,7 @@ module.exports = function RegPage() {
           type="password"
           name="password"
           placeholder="Введите пароль"
-          minLength="6"
+          minLength="3"
           required
         />
         <input
@@ -38,7 +38,7 @@ module.exports = function RegPage() {
           type="password"
           name="passwordConfirm"
           placeholder="Повторите пароль"
-          minLength="6"
+          minLength="3"
           required
         />
 
