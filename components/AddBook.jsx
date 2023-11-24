@@ -2,10 +2,12 @@ const React = require("react");
 const Layout = require("./Layout");
 const CardBook = require("./CardBook");
 
+
 function AddBook({ user }) {
   return (
     
       <div className="add-container">
+
         <h1>Добавьте Вашу книгу!</h1>
         <form className="add-book ">
           <div>

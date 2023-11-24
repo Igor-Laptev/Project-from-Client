@@ -6,7 +6,9 @@ const Layout = require("../Layout");
 
 function ProfilePage({ user, books, layout }) {
   return (
+
     <Layout user={user}>
+
       <div>
         {user && <h2>Добро пожаловать, {user.name}!</h2>}
         <AddBook />
