@@ -5,7 +5,7 @@ const Layout = require("../Layout");
 function EditBookPage({ user, book }) {
   return (
     <Layout user={user}>
-      <h3>Изменить встречу 👇</h3>
+      <h3>Изменить книгу</h3>
       <form className="js-update-form" data-id={book.id}>
         <div className="mb-3">
           <label className="form-label">Название</label>
@@ -44,7 +44,7 @@ function EditBookPage({ user, book }) {
           />
         </div>
         <button type="submit" className="btn btn-outline-warning">
-          Изменить 👌
+          Изменить
         </button>
       </form>
     </Layout>

@@ -35,27 +35,29 @@ router.post("/add", async (req, res) => {
 });
 
 
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
 
+  const { name, author, description, img } = req.body;
 
+  try {
+    const book = await Book.findOne({
+      where: { id, userId: res.locals.user.id },
+    });
+    if (!book) {
+      return res.status(400).json({ message: "Нет доступа" });
+    }
 
+    book.name = name;
+    book.description = description;
+    book.img = img;
+    book.author = author;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    await book.save();
+    res.json({ success: true, updatedBook: book });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
 
 
 router.delete("/:id", async (req, res) => {
