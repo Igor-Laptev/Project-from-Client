@@ -7,7 +7,7 @@ function FavoritePage({ books, user }) {
     <Layout user={user}>
       <div className="js-book-container add-container">
         {books.map((book) => (
-          <CardBook key={book.id} book={book} user={user} />
+          <CardBook key={book.id} book={book} user={user} favorite={'favorite'} />
         ))}
       </div>
     </Layout>
